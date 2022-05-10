@@ -9,7 +9,7 @@ Instance: ""
 NodeName: k8s-1.example.edu
 
 # Enable optional sidecar logging
-HTTPLogger: 
+HTTPLogger:
   Enabled: false
   # Secret: my-secret
 
@@ -48,7 +48,7 @@ XCacheConfig:
   CertSecret: xcache-cert-secret
   # Disable OSG monitoring and reporting
   DisableOSGMonitoring: true
-  # Manager host and port for CMS Redirector 
+  # Manager host and port for CMS Redirector
   XCRedirectorFQDN: redirector.example.edu
   XCRedirectorPort: 1094
   LocalRoot: /xcache/namespace
