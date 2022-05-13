@@ -32,3 +32,36 @@ To uninstall the chart:
 ```shell
 helm delete my-<chart-name>
 ```
+
+## Linting Locally
+
+Install [Docker](https://docs.docker.com/get-docker/) for developing, managing, and running OCI containers on your system. Then build the `chart-testing` Docker image:
+
+```shell
+docker build --file Dockerfile --tag chart-testing:local .
+```
+
+Lint the chart by passing the `lint` command to the container:
+
+```shell
+[your@localmachine]$ docker run -it -v ${PWD}:/work chart-testing:local lint
+Linting charts...
+
+-----------
+ Charts to be processed:
+-----------
+ cms-xcache => (version: "1.0.1", path: "charts/cms-xcache")
+-----------
+
+Linting chart 'cms-xcache => (version: "1.0.1", path: "charts/cms-xcache")'
+Checking chart 'cms-xcache => (version: "1.0.1", path: "charts/cms-xcache")' for a version bump...
+Old chart version: 1.0.1
+New chart version: 1.0.1
+-----------
+ ✖︎ cms-xcache => (version: "1.0.1", path: "charts/cms-xcache") > Chart version not ok. Needs a version bump!
+-----------
+Error: Error linting charts: Error processing charts
+Error linting charts: Error processing charts
+```
+
+Additional commands described in [GitHub: Chart Testing](https://github.com/helm/chart-testing) are also available but not used by our GitHub Actions at this time. 
