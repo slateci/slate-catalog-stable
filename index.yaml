@@ -14,4 +14,15 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/cms-xcache-1.0.1/cms-xcache-1.0.1.tgz
     version: 1.0.1
-generated: "2022-05-10T23:34:55.333506451Z"
+  osg-frontier-squid:
+  - apiVersion: v1
+    appVersion: 4.13-1.1
+    created: "2022-05-25T21:54:10.695643948Z"
+    description: A Helm chart for configuration and deployment of the Open Science
+      Grid's Frontier Squid application.
+    digest: 49acbbc24be48357ebbc61d54507a2e2fa6201145b1583900a637eb697ff4e3a
+    name: osg-frontier-squid
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
+    version: 1.7.12
+generated: "2022-05-25T21:54:10.695740148Z"
