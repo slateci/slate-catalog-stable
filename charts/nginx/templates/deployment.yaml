@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: "nginx:{{ default .Chart.appVersion .Values.Image.tag }}"
+        image: "nginx:{{ default .Chart.AppVersion .Values.Image.tag }}"
         imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: nginx-{{ .Values.Instance }}-configuration
