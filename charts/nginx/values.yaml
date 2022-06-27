@@ -29,6 +29,11 @@ NetworkPolicy:
   Enabled: false
   AllowedCIDRs:
     - 0.0.0.0/0
+
+Image: {}
+  ## The tag of the nginx image.
+  # tag: "1.23"
+
 ### SLATE-START ###
 SLATE:
   Cluster:
