@@ -14,6 +14,20 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/cms-xcache-1.0.1/cms-xcache-1.0.1.tgz
     version: 1.0.1
+  nginx:
+  - apiVersion: v1
+    appVersion: latest
+    created: "2022-06-28T18:13:40.863717405Z"
+    description: A simple nginx deployment which serves a static page
+    digest: fb50f1213c52fab58c8b0c94b7bceb47bfe48f4a40a4b4794f636251a5be57fc
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: nginx
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/nginx-1.2.0/nginx-1.2.0.tgz
+    version: 1.2.0
   osg-frontier-squid:
   - apiVersion: v1
     appVersion: 4.13-1.1
@@ -25,4 +39,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
     version: 1.7.12
-generated: "2022-05-25T21:54:10.695740148Z"
+generated: "2022-06-28T18:13:40.863726605Z"
