@@ -19,7 +19,7 @@ spec:
     instance: {{ .Values.Instance | quote }}
 ---
 {{ if .Values.Ingress.Enabled }}
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ template "nginx.fullname" . }}
@@ -37,6 +37,9 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: {{ template "nginx.fullname" . }}
-          servicePort: 80
+          service:
+            name: {{ template "nginx.fullname" . }}
+            port:
+              number: 80
+        pathType: ImplementationSpecific
 {{ end }}
