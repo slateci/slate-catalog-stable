@@ -6,3 +6,7 @@ description: A Helm chart for configuration and deployment of the Open Science G
 name: osg-frontier-squid
 # Chart version
 version: 1.8.3
+maintainers:
+  - name: slateci
+    email: slateci@googlegroups.com
+    url: https://slateci.io/
