@@ -40,7 +40,11 @@ spec:
         - name: SQUID_IPRANGE
           value: {{ .Values.SquidConf.IPRange }}
         - name: SQUID_CACHE_MEM
-          value: '{{ .Values.SquidConf.CacheMem }} MB'  
+        {{- if .Values.SquidConf.CPU }}
+          value: '{{ div .Values.SquidConf.CacheMem .Values.SquidConf.CPU }} MB'
+        {{- else }}
+          value: '{{ .Values.SquidConf.CacheMem }} MB'
+        {{- end }}
         {{ if .Values.SquidConf.CacheSize }}
         - name: SQUID_CACHE_DISK
           value: '{{ .Values.SquidConf.CacheSize }}'
@@ -48,25 +52,40 @@ spec:
         {{ if .Values.SquidConf.MaxAccessLog }}
         - name: SQUID_MAX_ACCESS_LOG
           value: {{ .Values.SquidConf.MaxAccessLog }}
-        {{ end }} 
+        {{ end }}
         {{ if .Values.Alarm.AaasServer }}
         - name: AAAS_SERVER
           value: '{{ .Values.Alarm.AaasServer }}'
         {{ end }}
         resources:
           requests:
+            {{- if .Values.SquidConf.CPU }}
             cpu: {{ .Values.SquidConf.CPU }}
-        {{ if not  .Values.SquidConf.CacheDirOnHost }}
-# converting CacheSize to MiB and adding it to total request
+            {{- else }}
+            cpu: 1
+            {{- end }}
+            {{- if .Values.SquidConf.CacheMem }}
+            memory: '{{ .Values.SquidConf.CacheMem }}Mi'
+            {{- end }}
+            {{- if not  .Values.SquidConf.CacheDirOnHost }}
             ephemeral-storage: {{ add .Values.SquidConf.RequestEphemeralSize  (floor (div (mul .Values.SquidConf.CacheSize 9537) 10000))  }}Mi
-          limits:
-# converting CacheSize to MiB and adding it to total limit
-            ephemeral-storage: {{ add .Values.SquidConf.LimitEphemeralSize  (floor (div (mul .Values.SquidConf.CacheSize 9537) 10000))  }}Mi
-        {{ else }}
+            {{- else }}
             ephemeral-storage: {{ .Values.SquidConf.RequestEphemeralSize  }}Mi
+            {{- end }}
           limits:
+            {{- if .Values.SquidConf.CPU }}
+            cpu: {{ mul .Values.SquidConf.CPU 2 }}
+            {{- else }}
+            cpu: 2
+            {{- end }}
+            {{- if .Values.SquidConf.CacheMem }}
+            memory: '{{ mul .Values.SquidConf.CacheMem 2 }}Mi'
+            {{- end }}
+            {{- if not  .Values.SquidConf.CacheDirOnHost }}
+            ephemeral-storage: {{ add .Values.SquidConf.LimitEphemeralSize  (floor (div (mul .Values.SquidConf.CacheSize 9537) 10000))  }}Mi
+            {{- else }}
             ephemeral-storage: {{ .Values.SquidConf.LimitEphemeralSize  }}Mi
-        {{ end }}
+            {{- end }}
         ports:
         - containerPort: 3128
           name: squid
@@ -77,38 +96,33 @@ spec:
           hostPort: 3401
           {{ end }}
         {{ if and .Values.NodeSelection.Hostname .Values.Alarm.Site }}
-        livenessProbe:
-          exec:
-            command: ["/bin/sh","-c","/usr/local/sbin/heartbeat.sh {{ .Values.Instance }} {{ .Values.Alarm.Site }}"]
-          initialDelaySeconds: 10
-          periodSeconds: 10
         lifecycle:
           preStop:
             exec:
               command: ["/bin/sh","-c","/usr/local/sbin/squid-pre-stop-alarm.sh {{ .Values.Instance }} {{ .Values.NodeSelection.Hostname }} {{ .Values.Alarm.Site }}"]
         {{ end }}
         volumeMounts:
-# Commented out and will probably not be needed. We're using the default 60-image-post-init.sh script 
+# Commented out and will probably not be needed. We're using the default 60-image-post-init.sh script
 # that comes with upstream image. Our custom config has been moved to the .awk file added through configmap
 #        - name: osg-frontier-squid-{{ .Values.Instance }}-conf
 #          mountPath: /etc/osg/image-config.d/60-image-post-init.sh
-#          subPath: 60-image-post-init.sh 
+#          subPath: 60-image-post-init.sh
         {{ if .Values.SquidConf.CacheDirOnHost }}
         - name: osg-frontier-squid-{{ .Values.Instance }}-cachedir
-          mountPath: /var/cache/squid 
+          mountPath: /var/cache/squid
         {{ else if .Values.SLATE.LocalStorage }}
         - mountPath: /var/cache/squid
           name: osg-frontier-squid-{{ .Values.Instance }}-data
-        {{ end }} 
+        {{ end }}
         {{ if .Values.SquidConf.LogToStdout }}
         - name: osg-frontier-squid-{{ .Values.Instance }}-conf
           mountPath: /etc/supervisord.d/50-squid-log-dump.conf
-          subPath: 50-squid-log-dump.conf 
+          subPath: 50-squid-log-dump.conf
         {{ end }}
         {{ if .Values.SquidConf.CleanLog }}
         - name: osg-frontier-squid-{{ .Values.Instance }}-conf
           mountPath: /etc/supervisord.d/55-squid-log-clean.conf
-          subPath: 55-squid-log-clean.conf 
+          subPath: 55-squid-log-clean.conf
         {{ end }}
         - mountPath: /etc/squid/customize.d/60-customization.awk
           subPath: 60-customization.awk
@@ -125,10 +139,13 @@ spec:
         {{ if and .Values.NodeSelection.Hostname .Values.Alarm.Site }}
         - name: osg-frontier-squid-{{ .Values.Instance }}-conf
           mountPath: /usr/local/sbin/squid-pre-stop-alarm.sh
-          subPath: squid-pre-stop-alarm.sh 
+          subPath: squid-pre-stop-alarm.sh
         - name: osg-frontier-squid-{{ .Values.Instance }}-conf
           mountPath: /usr/local/sbin/heartbeat.sh
           subPath: heartbeat.sh
+        - name: osg-frontier-squid-{{ .Values.Instance }}-conf
+          mountPath: /etc/cron.d/heartbeat.cron
+          subPath: heartbeat.cron
         {{ end }}
       volumes:
         {{ if .Values.SquidConf.CacheDirOnHost }}
@@ -136,7 +153,7 @@ spec:
           hostPath:
             path: /var/cache/squid
             type: Directory
-        {{ end }} 
+        {{ end }}
         - name: osg-frontier-squid-{{ .Values.Instance }}-awk
           configMap:
             name: {{ template "osg-frontier-squid.fullname" . }}
@@ -165,7 +182,10 @@ spec:
               mode: 448
             - key: heartbeat.sh
               path: heartbeat.sh
-              mode: 448
+              mode: 493
+            - key: heartbeat.cron
+              path: heartbeat.cron
+              mode: 420
             {{ end }}
         - name: osg-frontier-squid-{{ .Values.Instance }}-data
         {{ if .Values.SLATE.LocalStorage }}
