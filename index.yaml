@@ -57,6 +57,20 @@ entries:
   osg-frontier-squid:
   - apiVersion: v1
     appVersion: 4.13-1.1
+    created: "2022-07-13T20:02:49.788421761Z"
+    description: A Helm chart for configuration and deployment of the Open Science
+      Grid's Frontier Squid application.
+    digest: 97a3e8fb335fe5977a20540493a259384cc8adbc7c41a75d47fcf3f8b522648f
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: osg-frontier-squid
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.8.5/osg-frontier-squid-1.8.5.tgz
+    version: 1.8.5
+  - apiVersion: v1
+    appVersion: 4.13-1.1
     created: "2022-05-25T21:54:10.695643948Z"
     description: A Helm chart for configuration and deployment of the Open Science
       Grid's Frontier Squid application.
@@ -65,4 +79,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
     version: 1.7.12
-generated: "2022-06-29T21:52:01.234243152Z"
+generated: "2022-07-13T20:02:49.788518709Z"
