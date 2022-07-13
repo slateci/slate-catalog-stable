@@ -17,6 +17,19 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: latest
+    created: "2022-07-13T20:34:08.740424746Z"
+    description: A simple nginx deployment which serves a static page
+    digest: 44bceeea4e8986871a38c49821d3277de5aef6d9e875a0aedc2af53619c0b974
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: nginx
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/nginx-1.2.3/nginx-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v1
+    appVersion: latest
     created: "2022-06-29T21:52:01.234092251Z"
     description: A simple nginx deployment which serves a static page
     digest: 66d77aaa53c0a35aac514f064534a748e72217f13d36bf12353bc316c896c9de
@@ -79,4 +92,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
     version: 1.7.12
-generated: "2022-07-13T20:02:49.788518709Z"
+generated: "2022-07-13T20:34:08.740512951Z"
