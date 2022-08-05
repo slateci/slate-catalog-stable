@@ -1,0 +1,60 @@
+# Generates app name as "xcache-[Instance]"
+# Enables unique instances of XCache in one namespace
+Instance: slate01
+
+Service:
+  # Port that the service will utilize.
+  Port: 1094
+  # External IP that may access the service
+  # 192.170.227.151 - localhost
+  # 192.170.227.231 - ml node - root://xcache.mwt2.org:1094
+  ExternalIP: 192.170.227.151
+
+SiteConfig:
+  Name: Home
+
+Monitoring:
+  Collector: http://xcache.atlas-ml.org:80
+  GStreamCollector: collector.atlas-ml.org:9000
+  VPheartbeat: https://vps.cern.ch/liveness
+
+XCacheConfig:
+  # Local directories to be used as a cache
+  CacheDirectories:
+    - path: /C/scratch/data
+  MetaDirectory: /C/scratch/meta
+  # Space usage
+  HighWaterMark: 0.95
+  LowWaterMark: 0.90
+
+  # The amount of memory XCache is allowed to use (in GB)
+  RamSize: 16g
+  # Minimal chunk size that will be prefetched/cached.
+  BlockSize: 256k
+  # to prefetch even chunks that were not requested
+  Prefetch: 0
+  # Write queue parameters
+  WQBlocksPerLoop: 10
+  WQThreads: 2
+  # The name of the secret that was created for your XCache certificate
+  # This must be created BEFORE deploying XCache
+  CertSecret: xcache-cert-secret
+
+image:
+  # repository: opensciencegrid/atlas-xcache
+  # tag: fresh
+  # pullPolicy: Always
+  repository: slateci/xcache
+  tag: testing
+  pullPolicy: Always
+
+heartbeats:
+  frequency: 60
+  image: ivukotic/atlas-xcache-heartbeats
+  tag: latest
+
+### SLATE-START ###
+SLATE:
+  Instance:
+    ID: "untagged"
+### SLATE-END ###
