@@ -14,6 +14,16 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/cms-xcache-1.0.1/cms-xcache-1.0.1.tgz
     version: 1.0.1
+  globus-connect-v4:
+  - apiVersion: v1
+    appVersion: 4.0.59
+    created: "2022-08-05T23:51:16.276300973Z"
+    description: Globus Connect data transfer service
+    digest: 2f0da30ecade24de4dc1b9e1b58ca7c4b82adc6cd7f5bf88cef1e3f68827e60f
+    name: globus-connect-v4
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v4-0.7.4/globus-connect-v4-0.7.4.tgz
+    version: 0.7.4
   nginx:
   - apiVersion: v1
     appVersion: latest
@@ -92,4 +102,56 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
     version: 1.7.12
-generated: "2022-07-13T20:34:08.740512951Z"
+  osg-hosted-ce:
+  - apiVersion: v1
+    appVersion: 5.1.5
+    created: "2022-08-05T23:51:16.392662858Z"
+    description: OSG Hosted Compute Element
+    digest: ebcb9e58b18f843635cd25408a9666ff437da939b30eed212f407a39b35e3b7c
+    name: osg-hosted-ce
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.1.2/osg-hosted-ce-4.1.2.tgz
+    version: 4.1.2
+  v4a:
+  - apiVersion: v2
+    appVersion: 1.26.0
+    created: "2022-08-05T23:51:16.509670452Z"
+    description: A Varnish for ATLAS Frontiers
+    digest: 64bb400339d9e80da0af7ba1327fc35738ab261ef370c488a725e845ec3b5043
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4a
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4a-0.1.26/v4a-0.1.26.tgz
+    version: 0.1.26
+  v4cvmfs:
+  - apiVersion: v2
+    appVersion: 1.26.0
+    created: "2022-08-05T23:51:16.648835448Z"
+    description: A Varnish for CVMFS
+    digest: fcc7d5e84e23fbaf074cef7008dd2e3b592f458674d169c37c6a767455cac06e
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4cvmfs
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4cvmfs-0.1.26/v4cvmfs-0.1.26.tgz
+    version: 0.1.26
+  xcache:
+  - apiVersion: v1
+    appVersion: 5.4.0
+    created: "2022-08-05T23:51:16.821552501Z"
+    description: XCache is a xrootd based caching service for k8s
+    digest: 765f1dde8ee3247d329fd7bff5ec4f69af3530854f7faf4bcbf07317d94679e4
+    home: http://slateci.io/XCache/
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: xcache
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
+    version: 0.7.3
+generated: "2022-08-05T23:51:16.821833905Z"
