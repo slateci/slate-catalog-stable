@@ -8,4 +8,4 @@ on:
 jobs:
   test:
     name: Test Helm Charts
-    uses: slateci/github-actions/.github/workflows/chart-repo-test.yml@v1
+    uses: slateci/github-actions/.github/workflows/chart-repo-test.yml@feature/56-chart-repo-testyml-ct-env-vars-not-working
