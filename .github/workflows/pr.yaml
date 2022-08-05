@@ -9,7 +9,3 @@ jobs:
   test:
     name: Test Helm Charts
     uses: slateci/github-actions/.github/workflows/chart-repo-test.yml@v1
-    with:
-      chart_yaml_schema: "${{ github.workspace }}/chart_schema.yaml"
-      config: "${{ github.workspace }}/ct.yaml"
-      lint_conf: "${{ github.workspace }}/lintconf.yaml"
