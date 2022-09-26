@@ -105,6 +105,15 @@ entries:
   osg-hosted-ce:
   - apiVersion: v1
     appVersion: 5.1.5
+    created: "2022-09-26T15:20:04.227917331Z"
+    description: OSG Hosted Compute Element
+    digest: fe0a750f7a1cdfde46681784d94ddeca26d98ea1f57b24b733f22fdc244c32f1
+    name: osg-hosted-ce
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.1.3/osg-hosted-ce-4.1.3.tgz
+    version: 4.1.3
+  - apiVersion: v1
+    appVersion: 5.1.5
     created: "2022-08-05T23:51:16.392662858Z"
     description: OSG Hosted Compute Element
     digest: ebcb9e58b18f843635cd25408a9666ff437da939b30eed212f407a39b35e3b7c
@@ -154,4 +163,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-08-05T23:51:16.821833905Z"
+generated: "2022-09-26T15:20:04.227935232Z"
