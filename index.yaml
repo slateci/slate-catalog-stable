@@ -27,6 +27,19 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: latest
+    created: "2022-11-03T20:55:36.614394159Z"
+    description: A simple nginx deployment which serves a static page
+    digest: 5b3b9c5046280b63bd40a6f170b5c32a995298fd2415fb245ec4b521bd07fad5
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: nginx
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/nginx-1.2.4/nginx-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v1
+    appVersion: latest
     created: "2022-07-13T20:34:08.740424746Z"
     description: A simple nginx deployment which serves a static page
     digest: 44bceeea4e8986871a38c49821d3277de5aef6d9e875a0aedc2af53619c0b974
@@ -177,4 +190,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-10-31T20:11:00.142762594Z"
+generated: "2022-11-03T20:55:36.614418559Z"
