@@ -1,6 +1,9 @@
 name: Notify API Server
 
 on:
+  push:
+    branches:
+      - feature/58-update-notify-apiyml-github
   workflow_run:
     workflows:
       - pages-build-deployment
@@ -12,6 +15,8 @@ on:
 jobs:
   notify:
     name: Notify
-    uses: slateci/github-actions/.github/workflows/slate-updateapps.yml@v9
+    uses: slateci/github-actions/.github/workflows/slate-updateapps.yml@feature/96-allow-for-separate-slate-tokens-in-slate-updateappsyml-github-workflow
     secrets:
-      slate_api_token: "${{ secrets.SLATE_API_TOKEN }}"
+      slate_api_token_dev: "${{ secrets.SLATE_API_TOKEN_DEV }}"
+      slate_api_token_staging: "${{ secrets.SLATE_API_TOKEN_STAGING }}"
+      slate_api_token_prod: "${{ secrets.SLATE_API_TOKEN_PROD }}"
