@@ -157,6 +157,17 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.1.2/osg-hosted-ce-4.1.2.tgz
     version: 4.1.2
+  stashcache:
+  - apiVersion: v1
+    appVersion: v4.12.0-rc2
+    created: "2022-11-10T16:20:03.909103384Z"
+    description: StashCache is an XRootD-based caching service
+    digest: c1b0cf95f029962fcb01b788614e31eaa02eba5e698cba3538811d989bbdcb60
+    home: https://opensciencegrid.org/docs/data/stashcache/overview/
+    name: stashcache
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/stashcache-0.1.19/stashcache-0.1.19.tgz
+    version: 0.1.19
   v4a:
   - apiVersion: v2
     appVersion: 1.26.0
@@ -199,4 +210,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-11-09T22:23:02.724265842Z"
+generated: "2022-11-10T16:20:03.909134984Z"
