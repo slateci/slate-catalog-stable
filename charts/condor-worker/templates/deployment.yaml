@@ -121,7 +121,7 @@ spec:
           subPath: start-nginx.sh
       {{ end }}
       - name: condor-worker-worker
-        image: slateci/condor-worker:latest
+        image: hub.opensciencegrid.org/slate/condor-worker:latest
         volumeMounts:
         {{ if .Values.HTTPLogger.Enabled }}
         - name: log-volume
