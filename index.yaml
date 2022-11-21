@@ -176,6 +176,16 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.1.2/osg-hosted-ce-4.1.2.tgz
     version: 4.1.2
+  perfsonar-testpoint:
+  - apiVersion: v1
+    appVersion: 4.3.4
+    created: "2022-11-21T18:07:44.08731756Z"
+    description: Perfsonar Testpoint Deployment
+    digest: 89bb3ec5319036978c49feaf5690f12a0e8a519fb9c0e572d7cb82d624cd8441
+    name: perfsonar-testpoint
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/perfsonar-testpoint-1.4.3/perfsonar-testpoint-1.4.3.tgz
+    version: 1.4.3
   stashcache:
   - apiVersion: v1
     appVersion: v4.12.0-rc2
@@ -229,4 +239,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-11-21T17:59:21.184415368Z"
+generated: "2022-11-21T18:07:44.08733686Z"
