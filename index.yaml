@@ -14,6 +14,16 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/cms-xcache-1.0.1/cms-xcache-1.0.1.tgz
     version: 1.0.1
+  condor-worker:
+  - apiVersion: v1
+    appVersion: 8.6.14
+    created: "2022-11-21T17:31:14.554894501Z"
+    description: HTCondor distributed high-throughput computing system
+    digest: 8cacb54a64d105fda1945fec41f25bad0fd1425f5904dc44b37f87bd4810a53a
+    name: condor-worker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-worker-0.9.15/condor-worker-0.9.15.tgz
+    version: 0.9.15
   globus-connect-v4:
   - apiVersion: v1
     appVersion: 4.0.63
@@ -210,4 +220,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-11-10T16:20:03.909134984Z"
+generated: "2022-11-21T17:31:14.554920501Z"
