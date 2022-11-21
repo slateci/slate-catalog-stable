@@ -20,7 +20,6 @@ spec:
     type: Recreate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: {{ template "perfsonar-testpoint.name" . }}
         chart: {{ template "perfsonar-testpoint.chart" . }}
@@ -39,4 +38,3 @@ spec:
       nodeSelector:
         perfsonar: enabled
       {{ end }}
-status: {}
