@@ -37,6 +37,15 @@ entries:
   globus-connect-v4:
   - apiVersion: v1
     appVersion: 4.0.63
+    created: "2022-12-07T22:26:49.521470437Z"
+    description: Globus Connect data transfer service
+    digest: 9d6b98b1b6f0b853c9d9d6c09b028c88c54ed9c27ecaf335eca4b57cfa2e109a
+    name: globus-connect-v4
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v4-0.7.7/globus-connect-v4-0.7.7.tgz
+    version: 0.7.7
+  - apiVersion: v1
+    appVersion: 4.0.63
     created: "2022-11-09T22:23:02.724247242Z"
     description: Globus Connect data transfer service
     digest: 240e1999e84366cd494131555fa948c320f22fc54f5af3c87e27d550d9bac961
@@ -300,4 +309,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-12-07T21:26:08.359617694Z"
+generated: "2022-12-07T22:26:49.521800141Z"
