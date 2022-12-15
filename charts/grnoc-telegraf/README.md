@@ -2,7 +2,7 @@
 
 Application Name (in catalog): `grnoc-telegraf`
 
-Application Version: `0.7.0`
+Application Version: `0.8.0`
 
 
 ## Description
