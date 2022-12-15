@@ -64,6 +64,16 @@ entries:
     version: 0.7.4
   grnoc-telegraf:
   - apiVersion: v2
+    appVersion: 2.0.3
+    created: "2022-12-15T20:59:13.927545711Z"
+    description: Deploys an SNMP monitoring service and pushes metrics to a GRNOC
+      TSDS using Telegraf.
+    digest: 0e63cb8a78bf434e4475ea6a49f1877f59cb731ee950fef945a1b909c615dd54
+    name: grnoc-telegraf
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/grnoc-telegraf-0.8.0/grnoc-telegraf-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
     appVersion: 1.17.0
     created: "2022-11-23T21:03:28.666722388Z"
     description: Deploys an SNMP monitoring service and pushes metrics to a GRNOC
@@ -309,4 +319,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-12-07T22:26:49.521800141Z"
+generated: "2022-12-15T20:59:13.927784219Z"
