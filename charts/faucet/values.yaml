@@ -6,7 +6,7 @@
 Instance: global
 
 # StorageClass for logs (default nfs-client for minislate)
-StorageClass: nfs-client
+storageClassName: nfs-client
 
 # Configuration data for faucet this is faucet.yaml
 Configuration: |-
