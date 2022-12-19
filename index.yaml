@@ -27,6 +27,15 @@ entries:
   faucet:
   - apiVersion: v1
     appVersion: 1.9.9
+    created: "2022-12-19T21:47:57.442273516Z"
+    description: Faucet OpenFlow SDN Controller
+    digest: f21c3a7b4a5ab1f4fb053c23d6c53c1851996e128f76f60932669662ba7a0587
+    name: faucet
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/faucet-1.2.2/faucet-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v1
+    appVersion: 1.9.9
     created: "2022-11-23T21:01:51.739567983Z"
     description: Faucet OpenFlow SDN Controller
     digest: eba7248a2da3c1a4990830e4f02a1c1909d2330a5051dc0d009a06174c515c72
@@ -319,4 +328,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-12-15T20:59:13.927784219Z"
+generated: "2022-12-19T21:47:57.442315416Z"
