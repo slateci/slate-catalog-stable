@@ -265,6 +265,17 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.1.2/osg-hosted-ce-4.1.2.tgz
     version: 4.1.2
+  perfsonar-checker:
+  - apiVersion: v1
+    appVersion: 4.3.4
+    created: "2023-01-05T17:17:51.776144627Z"
+    description: PerfSONAR checker app for running predefined network performance
+      tests
+    digest: 5337d770d21df528453d97a134893012b6a719480187049b9643affde79a30a2
+    name: perfsonar-checker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/perfsonar-checker-1.1.4/perfsonar-checker-1.1.4.tgz
+    version: 1.1.4
   perfsonar-testpoint:
   - apiVersion: v1
     appVersion: 4.3.4
@@ -328,4 +339,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2022-12-19T21:47:57.442315416Z"
+generated: "2023-01-05T17:17:51.776179227Z"
