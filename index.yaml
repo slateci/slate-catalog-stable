@@ -268,6 +268,16 @@ entries:
   perfsonar-checker:
   - apiVersion: v1
     appVersion: 4.3.4
+    created: "2023-01-06T21:10:24.413722045Z"
+    description: PerfSONAR checker app for running predefined network performance
+      tests
+    digest: 9471e7d57dc29aaaee4995d0354ad00676b39347d6c2f43382aea6652db97f76
+    name: perfsonar-checker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/perfsonar-checker-1.1.5/perfsonar-checker-1.1.5.tgz
+    version: 1.1.5
+  - apiVersion: v1
+    appVersion: 4.3.4
     created: "2023-01-05T17:17:51.776144627Z"
     description: PerfSONAR checker app for running predefined network performance
       tests
@@ -339,4 +349,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-01-05T17:17:51.776179227Z"
+generated: "2023-01-06T21:10:24.413855646Z"
