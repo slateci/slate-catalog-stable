@@ -10,7 +10,7 @@ For all tests to run correctly, you must have proper NTP configuration on the ta
 
 Next, download the values configuration file as shown below:
 
-`slate app get-conf --dev -o conf perfsonar-checker`
+`slate app get-conf -o conf perfsonar-checker`
 
 Edit that file as needed. For example, if you have a cluster node dedicated for running perfSONAR, you can specify it in the configuration file like:
 
