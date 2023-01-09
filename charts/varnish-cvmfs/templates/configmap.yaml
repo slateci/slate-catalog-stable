@@ -5,6 +5,7 @@ metadata:
 data:
   default.vcl: |-
     vcl 4.1;
+    import std;
     import dynamic;
     import directors;
 
@@ -32,21 +33,16 @@ data:
             set req.backend_hint = {{ $be.name }};
         }
         {{- end }}
-
     }
 
     sub vcl_backend_fetch {
-        {{- range $nindex, $be := .Values.backends }}
-        if (bereq.restarts == {{ $nindex }}) {
-            set req.backend_hint = {{ $be.name }};
-        }
-        {{- end }}
-
+        # this is needed for BNL CERN and some other backends
         unset bereq.http.host;
     }
 
     sub vcl_deliver {
-        if (resp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
+        if (resp.status == 404) {
+            std.log(">> force retry <<<");
             return(restart);
         }
     }
