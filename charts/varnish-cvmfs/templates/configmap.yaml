@@ -37,7 +37,7 @@ data:
 
     sub vcl_backend_fetch {
         {{- range $nindex, $be := .Values.backends }}
-        if (req.restarts == {{ $nindex }}) {
+        if (bereq.restarts == {{ $nindex }}) {
             set req.backend_hint = {{ $be.name }};
         }
         {{- end }}
