@@ -40,7 +40,7 @@ data:
     }
 
     sub vcl_deliver {
-        if (beresp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
+        if (resp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
             return(restart);
         }
     }
