@@ -35,20 +35,15 @@ data:
 
     }
 
+    sub vcl_backend_fetch {
+        unset bereq.http.host;
+    }
+
     sub vcl_backend_response {
         if (beresp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
             return(retry);
         }
     }
 
-    sub vcl_backend_error {
-        if (req.restarts < {{ len .Values.backends }}) {
-            return(retry);
-        }
-    }
-
-    sub vcl_backend_fetch {
-        unset bereq.http.host;
-    }
 
 
