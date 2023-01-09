@@ -15,25 +15,40 @@ data:
     }
     {{- end }}
 
-
     acl local {
         {{.Values.acl | nindent 4 }}
     }
-    sub vcl_init {
-        new vdir = directors.fallback();
-        {{- range $nindex, $be := .Values.backends }}
-        vdir.add_backend({{ $be.name }});
-        {{- end }}  
-    }
-    sub vcl_backend_fetch {
-        unset bereq.http.host;
-    }
+
     sub vcl_recv {
-        set req.backend_hint = vdir.backend();
         if (!(client.ip ~ local)) {
             return (synth(405));
-        } 
+        }        
         if (req.method != "GET" && req.method != "HEAD") {
             return (pipe);
         }
+
+        {{- range $nindex, $be := .Values.backends }}
+        if (req.restarts == $nindex) {
+            set req.backend = $be.name
+        }
+        {{- end }}
+
     }
+
+    sub vcl_fetch {
+        if (beresp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
+            return(restart);
+        }
+    }
+
+    sub vcl_error {
+        if (req.restarts < {{ len .Values.backends }}) {
+            return(restart);
+        }
+    }
+
+    sub vcl_backend_fetch {
+        unset bereq.http.host;
+    }
+
+
