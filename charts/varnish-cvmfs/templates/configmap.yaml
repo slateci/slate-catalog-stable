@@ -36,6 +36,13 @@ data:
     }
 
     sub vcl_backend_fetch {
+        {{- range $nindex, $be := .Values.backends }}
+        if (req.restarts == {{ $nindex }}) {
+            set req.backend_hint = {{ $be.name }};
+            set bereq.backend_hint = {{ $be.name }};
+        }
+        {{- end }}
+
         unset bereq.http.host;
     }
 
