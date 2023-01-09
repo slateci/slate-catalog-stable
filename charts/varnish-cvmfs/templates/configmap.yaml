@@ -37,7 +37,7 @@ data:
 
     sub vcl_backend_response {
         if (beresp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
-            return(restart);
+            return(retry);
         }
     }
 
