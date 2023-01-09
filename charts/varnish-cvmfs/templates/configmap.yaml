@@ -28,8 +28,8 @@ data:
         }
 
         {{- range $nindex, $be := .Values.backends }}
-        if (req.restarts == $nindex) {
-            set req.backend = $be.name
+        if (req.restarts == {{ $nindex }}) {
+            set req.backend = {{ $be.name }};
         }
         {{- end }}
 
