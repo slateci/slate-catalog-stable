@@ -323,6 +323,19 @@ entries:
     version: 0.1.26
   v4cvmfs:
   - apiVersion: v2
+    appVersion: 1.28.0
+    created: "2023-01-09T18:20:15.458961677Z"
+    description: A Varnish for CVMFS
+    digest: dd67bad4c7fdf4b230e4f630d0bfef6bc117f4659a2e2810f06993a80e4a6d9f
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4cvmfs
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4cvmfs-0.1.28/v4cvmfs-0.1.28.tgz
+    version: 0.1.28
+  - apiVersion: v2
     appVersion: 1.27.0
     created: "2023-01-09T18:11:29.929909267Z"
     description: A Varnish for CVMFS
@@ -362,4 +375,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-01-09T18:11:29.930072068Z"
+generated: "2023-01-09T18:20:15.459000859Z"
