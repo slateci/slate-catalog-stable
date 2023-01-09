@@ -39,9 +39,9 @@ data:
         unset bereq.http.host;
     }
 
-    sub vcl_backend_response {
+    sub vcl_deliver {
         if (beresp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
-            return(retry);
+            return(restart);
         }
     }
 
