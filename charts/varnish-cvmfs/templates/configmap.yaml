@@ -35,13 +35,13 @@ data:
 
     }
 
-    sub vcl_fetch {
+    sub vcl_backend_response {
         if (beresp.status >= 400 && req.restarts < {{ len .Values.backends }}) {
             return(restart);
         }
     }
 
-    sub vcl_error {
+    sub vcl_backend_error {
         if (req.restarts < {{ len .Values.backends }}) {
             return(restart);
         }
