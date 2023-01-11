@@ -7,5 +7,6 @@ It defines backends (Stratum 1 and 0 servers), these can be overwritten using va
 Only GET and HEAD requests will be served.
 Each requests starts from the first backend, so keep in mind the closeness of the stratum servers when ordering them in values.yaml.
 In case the first backend does not serve a given repo, backend response will be 404. 
-All 404 requests won't be cached and will be retried from the next backend in the list.
- 
+
+When one backend returns 404 other backends will be tried.
+If all of them return 404, that response will be cached for the future.
