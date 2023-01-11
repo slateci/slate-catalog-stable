@@ -42,7 +42,7 @@ data:
 
     sub vcl_backend_response {
         if ( beresp.status == 404 ) {
-            {{ $lb := last .Values.lbackends }}
+            {{ $lb := last .Values.backends }}
             if (bereq.backend != {{ get $lb "name" }} ){
                 # unless this is a last of backends don't cache it so 
                 # other backends can be tried
