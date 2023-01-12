@@ -1,5 +1,5 @@
-Site: "MWT2"
-varnish_size: "32G"
+Site: "SITE_NAME"
+varnish_size: "28G"
 
 monitoring:
   es: true
