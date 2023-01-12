@@ -39,6 +39,8 @@ spec:
                 - /usr/local/bin/sender.sh
             initialDelaySeconds: 120
             periodSeconds: 5
+            timeoutSeconds: 4
+            failureThreshold: 3
           ports:
             - containerPort: {{ .Values.ports.varnish_container_port }}
               hostPort: {{ .Values.ports.varnish_port }}
