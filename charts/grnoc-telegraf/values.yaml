@@ -10,7 +10,7 @@ Instance: ""
 writeToStdout: true
 
 # Specifies the amount of memory (in GB) to request
-requestMemory: "1000"
+requestMemory: "1G"
 
 # Specifies the default data collection interval.
 # Time values can be specified by combining an integer value with a time unit.

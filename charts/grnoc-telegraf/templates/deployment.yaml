@@ -45,7 +45,7 @@ spec:
                   key: password
           resources:
             requests: 
-              memory: '{{.Values.requestMemory}}'
+              memory: '{{ .Values.requestMemory }}'
       volumes:
         - name: telegraf-volume
           # populate volume with config map data
