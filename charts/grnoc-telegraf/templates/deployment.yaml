@@ -43,6 +43,9 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.grnocOutput.passwordSecretName }}
                   key: password
+          resources:
+            requests: 
+              memory: '{{ .Values.requestMemory }}'
       volumes:
         - name: telegraf-volume
           # populate volume with config map data

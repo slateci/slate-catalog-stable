@@ -9,6 +9,9 @@ Instance: ""
 # Optionally write metrics to stdout and local file in container.
 writeToStdout: true
 
+# Specifies the amount of memory (in GB) to request
+requestMemory: "1G"
+
 # Specifies the default data collection interval.
 # Time values can be specified by combining an integer value with a time unit.
 # Valid time units include "ns", "us", "ms", "s", "m" and "h".
