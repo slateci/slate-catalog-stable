@@ -13,7 +13,8 @@ Values description:
 
 * _Site_:  This variable is used in monitoring. REQUIRED
 * _acl_: This is a semicolumn separated list of IP ranges of the WNs allowed to use this proxy. REQUIRED
-* varnish_size: "28G" - should be ~20% smaller than the value given in _resources.requests.memory_.
+* varnish_mem: "24G" - should be ~20% smaller than the value given in _resources.requests.memory_.
+* varnish_transient_mem: "1G" - max size of individual objects if not streaming content.
 * monitoring.es - default is true
 * monitoring.snmp - default is true and it requires one more port free (3401)
 * ports.varnish_port - default is 6081 but can be changed

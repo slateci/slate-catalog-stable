@@ -28,7 +28,9 @@ spec:
           - name: SNMP_PORT
             value: {{ .Values.ports.snmp_container_port | quote }}
           - name: VARNISH_MEM
-            value: {{ .Values.varnish_size | quote }}
+            value: {{ .Values.varnish_mem | quote }}
+          - name: VARNISH_TRANSIENT_MEM
+            value: {{ .Values.varnish_transient_mem | quote }}
           - name: MONITOR_ES
             value: {{ .Values.monitoring.es | quote }}
           - name: MONITOR_SNMP
