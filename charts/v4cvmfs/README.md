@@ -6,7 +6,7 @@ alternative to [frontier squid](https://github.com/slateci/slate-catalog-stable/
 
 **NOTE**:
 For this to work a node must be labeled with "varnish: cvmfs"
-Node must have an IP visible to all the worker nodes that will use it.
+Node must have an IP visible to all the worker nodes (WNs) that will use it.
 Server will be accessible at `http://<IP>:6081`.
 
 ## Configuration
