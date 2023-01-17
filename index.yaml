@@ -309,6 +309,19 @@ entries:
     version: 0.1.19
   v4a:
   - apiVersion: v2
+    appVersion: 1.29.0
+    created: "2023-01-17T16:48:03.118594952Z"
+    description: A Varnish for ATLAS Frontiers
+    digest: 1fc62ed1ef9aa1d449bf02aa0f17fc3ecce6db1f8f842e5bcf8fb35f3af04d46
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4a
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4a-0.1.29/v4a-0.1.29.tgz
+    version: 0.1.29
+  - apiVersion: v2
     appVersion: 1.28.0
     created: "2023-01-13T00:30:34.207109067Z"
     description: A Varnish for ATLAS Frontiers
@@ -348,6 +361,19 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/v4a-0.1.26/v4a-0.1.26.tgz
     version: 0.1.26
   v4cvmfs:
+  - apiVersion: v2
+    appVersion: 1.47.0
+    created: "2023-01-17T16:48:03.298159421Z"
+    description: A Varnish for CVMFS
+    digest: 302efd8b6829606e32589571241701c42f3bbd43d0e8ad1c8ee2b20470a4f761
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4cvmfs
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4cvmfs-0.1.47/v4cvmfs-0.1.47.tgz
+    version: 0.1.47
   - apiVersion: v2
     appVersion: 1.46.0
     created: "2023-01-13T00:30:34.337598801Z"
@@ -635,4 +661,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-01-13T00:30:34.337765401Z"
+generated: "2023-01-17T16:48:03.298373228Z"
