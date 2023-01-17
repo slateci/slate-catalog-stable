@@ -1,5 +1,6 @@
 Site: "SITE_NAME"
-varnish_size: "28G"
+varnish_mem: "24G"
+varnish_transient_mem: "1G"
 
 monitoring:
   es: true
@@ -12,7 +13,7 @@ ports:
   snmp_port: 3401
 
 nodeSelector:
-  varnish: cvmfs-slate
+  varnish: frontier-slate
 
 acl: |-
   "localhost";
@@ -21,24 +22,20 @@ acl: |-
   "192.170.240.0"/23;
 
 backends:
-  - name: fermilab_2
-    host: 2620:6a:0:8421::244
+  # atlasfrontier1-ai.cern.ch
+  - name: backend20
+    host: 188.184.29.207
     port: 8000
-  - name: bnl_1
-    host: 192.12.15.180
+  - name: backend21
+    host: 2001:1458:201:e5::100:c1
     port: 8000
-  - name: cern_2
-    host: 2001:1458:301:cd::100:41d
-    port: 80
-  - name: fermilab_1
-    host: 131.225.189.138
+    # atlasfrontier2-ai.cern.ch
+  - name: backend30
+    host: 188.184.29.104
     port: 8000
-  - name: bnl_2
-    host: 192.12.15.179
+  - name: backend31
+    host: 2001:1458:201:e5::100:5a
     port: 8000
-  - name: cern_1
-    host: 128.142.194.109
-    port: 80
 
 resources:
   requests:

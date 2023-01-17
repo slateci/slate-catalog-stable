@@ -28,7 +28,9 @@ spec:
           - name: SNMP_PORT
             value: {{ .Values.ports.snmp_container_port | quote }}
           - name: VARNISH_MEM
-            value: {{ .Values.varnish_size | quote }}
+            value: {{ .Values.varnish_mem | quote }}
+          - name: VARNISH_TRANSIENT_MEM
+            value: {{ .Values.varnish_transient_mem | quote }}
           - name: MONITOR_ES
             value: {{ .Values.monitoring.es | quote }}
           - name: MONITOR_SNMP
@@ -39,6 +41,8 @@ spec:
                 - /usr/local/bin/sender.sh
             initialDelaySeconds: 120
             periodSeconds: 5
+            timeoutSeconds: 4
+            failureThreshold: 3
           ports:
             - containerPort: {{ .Values.ports.varnish_container_port }}
               hostPort: {{ .Values.ports.varnish_port }}
