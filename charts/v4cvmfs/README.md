@@ -11,13 +11,23 @@ Server will be accessible at `http://<IP>:6081`.
 
 ## Configuration
 
-Values description:
 
-* _Site_:  This variable is used in monitoring. REQUIRED
-* _acl_: This is a semicolumn separated list of IP ranges of the WNs allowed to use this proxy. REQUIRED
-* backends: the default list is good for any US site. Should be of the form:
 
-    ``` yaml
+| Parameter | Default     | Description |
+|-----------|-------------|-------------|
+| Site | None | Name of the site the instance is associated with. This variable is used in monitoring. *REQUIRED* | 
+| acl | None | This is a semicolumn separated list of IP ranges of the WNs allowed to use this proxy. *REQUIRED* |
+| backends | See below | Yaml with list of CVMFS servers | 
+| varnish_mem | 24G | Memory that varnish will use, should be ~20% smaller than the value given in _resources.requests.memory_ (see below).  | 
+| varnish_transient_mem | 1G | Maximum size of individual objects that are not being streamed | 
+| monitoring.es | true | Send monitoring data to elasticsearch |
+| monitoring.snmp | true | Allow SNMP monitoring, requires port 3401 to be accessible |
+| ports.varnish_port | 6081 | Port that varnish will listen on |
+| resources |  See below | memory and cpu resources for the varnish pod |
+
+
+The default for the backends is :
+``` yaml
     backends:
       - name: fermilab_2
         host: 2620:6a:0:8421::244
@@ -25,16 +35,10 @@ Values description:
       - name: bnl_1
         host: 192.12.15.180
         port: 8000
-    ```
+```
 
-* varnish_mem: "24G" - should be ~20% smaller than the value given in _resources.requests.memory_.
-* varnish_transient_mem: "1G" - max size of individual objects if not streaming content.
-* monitoring.es - default is true
-* monitoring.snmp - default is true and it requires one more port free (3401)
-* ports.varnish_port - default is 6081 but can be changed
-* resources - the default is:
-
-    ``` yaml
+The default for the resources is :
+``` yaml
     resources:
       requests:
         cpu: "4"
@@ -42,4 +46,4 @@ Values description:
       limits:
         cpu: "48"
         memory: "48Gi"
-    ```
+```
