@@ -41,7 +41,7 @@ data:
     }
 
     sub vcl_backend_response {
-        if ( beresp.status == 404 ) {
+        if ( beresp.status != 200 ) {
             {{ $lb := last .Values.backends }}
             if (bereq.backend != {{ get $lb "name" }} ){
                 # unless this is a last of backends don't cache it so 
@@ -49,14 +49,14 @@ data:
                 set beresp.uncacheable = true;
                 return (deliver);
             } else {
-                std.log(">> caching 404 <<");
+                std.log(">> caching Response <<");
                 set beresp.ttl = 180s;
             }
-        }
+        } 
     }
 
     sub vcl_deliver {
-        if (resp.status == 404) {
+        if (resp.status != 200) {
             if (obj.uncacheable){
                 # not all the backends were tried yet
                 std.log(">> force restart <<<");
