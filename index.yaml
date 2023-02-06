@@ -71,37 +71,6 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v4-0.7.4/globus-connect-v4-0.7.4.tgz
     version: 0.7.4
-  grnoc-telegraf:
-  - apiVersion: v2
-    appVersion: 2.0.3
-    created: "2023-01-17T18:12:45.767940879Z"
-    description: Deploys an SNMP monitoring service and pushes metrics to a GRNOC
-      TSDS using Telegraf.
-    digest: 6ffcd5473227b38bcbf253cd18fb5c218f6057fd9a4fe5b7463cba1632d7240d
-    name: grnoc-telegraf
-    urls:
-    - https://github.com/slateci/slate-catalog-stable/releases/download/grnoc-telegraf-0.9.0/grnoc-telegraf-0.9.0.tgz
-    version: 0.9.0
-  - apiVersion: v2
-    appVersion: 2.0.3
-    created: "2022-12-15T20:59:13.927545711Z"
-    description: Deploys an SNMP monitoring service and pushes metrics to a GRNOC
-      TSDS using Telegraf.
-    digest: 0e63cb8a78bf434e4475ea6a49f1877f59cb731ee950fef945a1b909c615dd54
-    name: grnoc-telegraf
-    urls:
-    - https://github.com/slateci/slate-catalog-stable/releases/download/grnoc-telegraf-0.8.0/grnoc-telegraf-0.8.0.tgz
-    version: 0.8.0
-  - apiVersion: v2
-    appVersion: 1.17.0
-    created: "2022-11-23T21:03:28.666722388Z"
-    description: Deploys an SNMP monitoring service and pushes metrics to a GRNOC
-      TSDS using Telegraf.
-    digest: 422ccc58785622f4edacacc53aadd8b0206ac2756b8f988de5d0a5f64cfaeed2
-    name: grnoc-telegraf
-    urls:
-    - https://github.com/slateci/slate-catalog-stable/releases/download/grnoc-telegraf-0.7.0/grnoc-telegraf-0.7.0.tgz
-    version: 0.7.0
   nginx:
   - apiVersion: v1
     appVersion: latest
