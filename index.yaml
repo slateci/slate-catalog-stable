@@ -678,6 +678,19 @@ entries:
   xcache:
   - apiVersion: v1
     appVersion: 5.4.0
+    created: "2023-02-28T23:40:43.185424689Z"
+    description: XCache is a xrootd based caching service for k8s
+    digest: 279f5532904bd3edd81f1ab55532d5147c668ae1d1e07d9187bcaa959482ef89
+    home: http://slateci.io/XCache/
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: xcache
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.4/xcache-0.7.4.tgz
+    version: 0.7.4
+  - apiVersion: v1
+    appVersion: 5.4.0
     created: "2022-08-05T23:51:16.821552501Z"
     description: XCache is a xrootd based caching service for k8s
     digest: 765f1dde8ee3247d329fd7bff5ec4f69af3530854f7faf4bcbf07317d94679e4
@@ -689,4 +702,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-01-24T23:49:20.720959308Z"
+generated: "2023-02-28T23:40:43.185738293Z"
