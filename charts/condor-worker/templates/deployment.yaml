@@ -122,6 +122,7 @@ spec:
       {{ end }}
       - name: condor-worker-worker
         image: hub.opensciencegrid.org/slate/condor-worker:latest
+        imagePullPolicy: IfNotPresent
         volumeMounts:
         {{ if .Values.HTTPLogger.Enabled }}
         - name: log-volume
