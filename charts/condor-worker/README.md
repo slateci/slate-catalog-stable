@@ -67,13 +67,16 @@ ALLOW_DAEMON = *
 | --------  | ----------  | ------- |
 | Instances | Number of HTCondor worker nodes | `1` |
 | CollectorHost | The HTCondor central manager | `localhost` |
+| CollectorPort | The port on which your Central Manager is listening | 9618 |
 | PasswordFileSecret | The SLATE secret that contains the HTCondor pool password, which should be stored under the key `condor_password` | `null` |
 | AuthTokenSecret | The SLATE secret that contains the HTCondor token issued by the central manager, which should be stored under the key `condor_token` | `null` |
 | MemoryLimit | The total amount of memory that is requested by the HTCondor pod - **NOTE** the HTcondor slots are configured to be partitionable by default | `512` |
 | NumberCPUs | The total number of CPUs requested by the HTCondor pod. **NOTE** The HTCondor slots are configured to be partitionable by default. | `1` | 
+| Cvmfs | If the CVMFS CSI is available, you can specify here to use it | false |
 | UseGPUs | If enabled, will attempt to create expose request GPUs via the nvidia-docker plugin and expose them as a GPU classad. The image currently uses CUDA driver v9.1.85 which likely needs to match the driver version on the host  | `false` |  
 | NumberGPUs | The number of GPUs requested via the nvidia-docker plugin | `2` | 
 | ExecuteDir | An external hostPath mounted into the container for scratch | Container default storage location |
+| PriorityClass | If your Kubernetes cluster has priority classes defined, you can modify that here | - |
 | CondorConfigFile | Any HTCondor-specific configuration macros may be set here. | - | 
 
 ### Usage
