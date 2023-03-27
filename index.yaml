@@ -17,6 +17,15 @@ entries:
   condor-worker:
   - apiVersion: v1
     appVersion: 10.0.2
+    created: "2023-03-27T20:58:34.244376885Z"
+    description: HTCondor distributed high-throughput computing system
+    digest: b1e49362bc76fc190785addb32d556946dd149714a19a1e29fb59c6f94d0c4cc
+    name: condor-worker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-worker-0.10.2/condor-worker-0.10.2.tgz
+    version: 0.10.2
+  - apiVersion: v1
+    appVersion: 10.0.2
     created: "2023-03-17T16:10:55.43904894Z"
     description: HTCondor distributed high-throughput computing system
     digest: a5788c9cf42bd9169da73b1fa9916060bb3ed0acbfebf4e884b7dd66e4f7f2a5
@@ -720,4 +729,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-03-17T16:10:55.439259444Z"
+generated: "2023-03-27T20:58:34.244547887Z"
