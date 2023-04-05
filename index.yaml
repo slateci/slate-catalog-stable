@@ -14,6 +14,16 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/cms-xcache-1.0.1/cms-xcache-1.0.1.tgz
     version: 1.0.1
+  condor-manager:
+  - apiVersion: v1
+    appVersion: 10.0.2
+    created: "2023-04-05T19:23:11.574657813Z"
+    description: HTCondor Central Manager Node
+    digest: 1f40ce4b144fb3feb3f8cbeb92e71691c75739bd6dbcb459ff5f2956dcc8a0ec
+    name: condor-manager
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-manager-0.2.2/condor-manager-0.2.2.tgz
+    version: 0.2.2
   condor-worker:
   - apiVersion: v1
     appVersion: 10.0.2
@@ -98,6 +108,17 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v4-0.7.4/globus-connect-v4-0.7.4.tgz
     version: 0.7.4
+  jupyterlab:
+  - apiVersion: v2
+    appVersion: 3.6.1
+    created: "2023-04-05T19:23:11.709882853Z"
+    description: A JupyterLab with a condor-submit capability
+    digest: aad1143b8f051ef87f037d5f2f7348abe04924ee7af9f6860c51c0cfce7d4b58
+    name: jupyterlab
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/jupyterlab-0.5.2/jupyterlab-0.5.2.tgz
+    version: 0.5.2
   nginx:
   - apiVersion: v1
     appVersion: latest
@@ -729,4 +750,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-03-27T20:58:34.244547887Z"
+generated: "2023-04-05T19:23:11.709975855Z"
