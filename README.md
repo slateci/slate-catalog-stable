@@ -7,6 +7,11 @@
 
 The stable catalog is intended to be the final catalog environment containing tested developer applications as described on the [SLATE website](https://slateci.io/docs/apps/catalog.html). These applications will be available on the Portal but treated as "ready for prime-time".
 
+Add the Helm repository locally via:
+```shell
+helm repo add https://slateci.io/slate-catalog-stable
+```
+
 ## Contributing an Application?
 
 Wanting to develop an application for SLATE? Check out our [Application Development](https://slateci.io/docs/apps) documentation.
