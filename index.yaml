@@ -17,6 +17,15 @@ entries:
   condor-manager:
   - apiVersion: v1
     appVersion: 10.0.2
+    created: "2023-05-02T16:37:34.850957548Z"
+    description: HTCondor Central Manager Node
+    digest: 1efd95e9c26b41ee320d6f81e1f0ef149d717714efa9b3c0bf227ab577b5b525
+    name: condor-manager
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-manager-0.2.3/condor-manager-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v1
+    appVersion: 10.0.2
     created: "2023-04-05T19:23:11.574657813Z"
     description: HTCondor Central Manager Node
     digest: 1f40ce4b144fb3feb3f8cbeb92e71691c75739bd6dbcb459ff5f2956dcc8a0ec
@@ -25,6 +34,15 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/condor-manager-0.2.2/condor-manager-0.2.2.tgz
     version: 0.2.2
   condor-worker:
+  - apiVersion: v1
+    appVersion: 10.0.2
+    created: "2023-05-02T16:37:34.979221687Z"
+    description: HTCondor distributed high-throughput computing system
+    digest: df8a6f60d550447de29e3f96448c0e4155ead3322c2ebe41aad81ea249a4a5a0
+    name: condor-worker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-worker-0.10.3/condor-worker-0.10.3.tgz
+    version: 0.10.3
   - apiVersion: v1
     appVersion: 10.0.2
     created: "2023-03-27T20:58:34.244376885Z"
@@ -109,6 +127,16 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v4-0.7.4/globus-connect-v4-0.7.4.tgz
     version: 0.7.4
   jupyterlab:
+  - apiVersion: v2
+    appVersion: 3.6.1
+    created: "2023-05-02T16:37:35.114598662Z"
+    description: A JupyterLab with a condor-submit capability
+    digest: 3664bfa2ecc51fdc4847973b62e491bfd5bb6259973b228a45bff958e59a5ac5
+    name: jupyterlab
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/jupyterlab-0.5.3/jupyterlab-0.5.3.tgz
+    version: 0.5.3
   - apiVersion: v2
     appVersion: 3.6.1
     created: "2023-04-05T19:23:11.709882853Z"
@@ -750,4 +778,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-04-05T19:23:11.709975855Z"
+generated: "2023-05-02T16:37:35.114830067Z"
