@@ -2,6 +2,10 @@
 # used to manage multiple instances of the same application
 Instance: ''
 
+#This is global config to specify which container image to pull. The image tag doesn't necessarily indicate or match the app version in the image.
+ContainerTags:
+  JupyterLabImageVer: '0.2.1'
+
 # Persistent Volume mounted as 'data' in the user's home directory
 PersistentVolume: 
 

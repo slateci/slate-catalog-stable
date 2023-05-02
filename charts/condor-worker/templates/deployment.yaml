@@ -97,7 +97,7 @@ spec:
       containers:
       {{ if .Values.HTTPLogger.Enabled }}
       - name: logging-sidecar
-        image: "nginx:1.15.9"
+        image: nginx:{{ .Values.ContainerTags.NginxImageVer }}
         command: ["/bin/bash"]
         args: ["/usr/local/bin/start-nginx.sh"]
         imagePullPolicy: IfNotPresent
@@ -121,7 +121,7 @@ spec:
           subPath: start-nginx.sh
       {{ end }}
       - name: condor-worker-worker
-        image: hub.opensciencegrid.org/slate/condor-worker:latest
+        image: hub.opensciencegrid.org/slate/condor-worker:{{ .Values.ContainerTags.CondorWorkerImageVer }}
         imagePullPolicy: "Always"
         volumeMounts:
         {{ if .Values.HTTPLogger.Enabled }}

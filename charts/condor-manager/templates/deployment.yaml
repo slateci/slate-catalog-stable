@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: condor-manager
-        image: hub.opensciencegrid.org/slate/condor-manager:latest
+        image: hub.opensciencegrid.org/slate/condor-manager:{{ .Values.ContainerTags.CondorManagerImageVer }}
         imagePullPolicy: "Always"
         ports:
         - name: condor-shared
