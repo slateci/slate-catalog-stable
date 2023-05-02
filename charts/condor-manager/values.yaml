@@ -2,6 +2,8 @@
 Instance: ""
 
 CondorConfig:
+  ContainerTags:
+    ImageVer: '10.0.2'
   # Extra configuration can be added via the ConfigFile parameter
   # ConfigFile: |+
   #   COLLECTOR_NAME = "MyPool"
