@@ -1,6 +1,11 @@
 # Generates app name as "condor-worker-[Instance]"
 Instance: ""
 
+#This is global config to specify which container image to pull. The image tag doesn't necessarily indicate or match the app version in the image.
+ContainerTags:
+  NginxImageVer: '1.15.9'
+  CondorWorkerImageVer: '10.0.2'
+
 HTTPLogger:
   Enabled: false
   # You can refer to a password that has been hashed by `openssl passwd -apr1`
