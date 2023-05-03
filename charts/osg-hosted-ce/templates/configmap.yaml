@@ -90,6 +90,9 @@ data:
     {{- end }}
     {{- end }}
 
+    # Refresh IDTOKENs every 15 minutes
+    JOB_ROUTER_IDTOKEN_REFRESH = 900
+
     # We don't use 'SendIDToken = token-name"' here because it's a route command,
     # not a job attr, meaning that it would have to be specified per route
     JOB_ROUTER_DEFAULTS @=jrd
