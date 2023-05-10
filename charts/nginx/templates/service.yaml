@@ -30,7 +30,14 @@ metadata:
     instance: {{ .Values.Instance | quote }}
   annotations:
     kubernetes.io/ingress.class: {{ .Values.Ingress.Class }}
+    cert-manager.io/cluster-issuer: {{ .Values.Ingress.Issuer }}
+    certmanager.k8s.io/cluster-issuer: {{ .Values.Ingress.Issuer }}
+    acme.cert-manager.io/http01-edit-in-place: "true"
 spec:
+  tls:
+  - hosts:
+    - {{ .Values.Ingress.Subdomain }}.{{ .Values.SLATE.Cluster.DNSName }}
+    secretName: nginx-{{ .Values.Instance}}-tls
   rules:
   - host: {{ .Values.Ingress.Subdomain }}.{{ .Values.SLATE.Cluster.DNSName }}
     http:
