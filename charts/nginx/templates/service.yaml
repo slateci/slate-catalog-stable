@@ -34,10 +34,12 @@ metadata:
     certmanager.k8s.io/cluster-issuer: {{ .Values.Ingress.Issuer }}
     acme.cert-manager.io/http01-edit-in-place: "true"
 spec:
+{{- if .Values.Ingress.TlsEnabled }}
   tls:
   - hosts:
     - {{ .Values.Ingress.Subdomain }}.{{ .Values.SLATE.Cluster.DNSName }}
     secretName: nginx-{{ .Values.Instance}}-tls
+{{- end }}
   rules:
   - host: {{ .Values.Ingress.Subdomain }}.{{ .Values.SLATE.Cluster.DNSName }}
     http:
