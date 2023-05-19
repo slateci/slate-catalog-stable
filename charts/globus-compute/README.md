@@ -4,7 +4,7 @@ This SLATE application will deploy a functioning Kubernetes endpoint into your S
 
 ## How to Use
 
-There are two required values to specify in the `values.yaml` file, `endpointUUID` and authentication. 
+There are two required values to specify in the application configuration file, `endpointUUID` and authentication. 
 
 ### `endpointUUID`
 
