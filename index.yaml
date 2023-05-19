@@ -98,6 +98,17 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/faucet-1.2.1/faucet-1.2.1.tgz
     version: 1.2.1
+  globus-compute-endpoint:
+  - apiVersion: v2
+    appVersion: 2.0.0
+    created: "2023-05-19T21:08:40.246289143Z"
+    description: Deploy a Globus Compute endpoint into a cluster
+    digest: 20b9585013bff652fa8188f2ad27c42b03a5ea9e687895c0976ff709d58898bf
+    name: globus-compute-endpoint
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/globus-compute-endpoint-0.1.6/globus-compute-endpoint-0.1.6.tgz
+    version: 0.1.6
   globus-connect-v4:
   - apiVersion: v1
     appVersion: 4.0.63
@@ -791,4 +802,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-05-17T20:19:50.323534253Z"
+generated: "2023-05-19T21:08:40.246530245Z"
