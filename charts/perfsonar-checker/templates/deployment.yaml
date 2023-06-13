@@ -52,7 +52,7 @@ spec:
           subPath: start-nginx.sh
       {{ end }}
       - name: perfsonar-testpoint
-        image: hub.opensciencegrid.org/slate/perfsonar-checker:5.0.1
+        image: hub.opensciencegrid.org/slate/perfsonar-checker:5.0.2
         imagePullPolicy: Always
         securityContext: 
           privileged: true
