@@ -52,3 +52,7 @@ SLATE:
   Instance:
     ID: "untagged"
 ### SLATE-END ###
+
+# Supported values are e.g. 'latest', '1.0.0', etc.. Consult the
+# hub.opensciencegrid.org/slate/v4a docker image for other tags.
+ImageTag: '1.0.0'
