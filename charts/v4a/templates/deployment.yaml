@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "ivukotic/v4a"
+          image: "hub.opensciencegrid.org/opensciencegrid/v4a:{{ .Values.ImageTag }}"
           imagePullPolicy: Always          
           env:
           - name: SITE
