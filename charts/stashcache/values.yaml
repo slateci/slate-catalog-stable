@@ -38,9 +38,6 @@ StashCache:
     User-agent: *
     Disallow: /
 
-ContainerTags:
-  StashCache: fresh
-
 ### SLATE-START ###
 SLATE:
   Instance:
