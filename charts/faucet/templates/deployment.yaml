@@ -18,7 +18,6 @@ spec:
       instance: {{ .Values.Instance | quote }}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: {{ template "faucet.name" . }}
         chart: {{ template "faucet.chart" . }}
@@ -29,7 +28,7 @@ spec:
       - env:
         - name: FAUCET_CONFIG_STAT_RELOAD
         - name: FAUCET_EVENT_SOCK
-        image: faucet/faucet:latest
+        image: 'faucet/faucet:1.9.9'
         name: faucet
         ports:
         - containerPort: 6653
@@ -49,4 +48,3 @@ spec:
       - name: faucet-{{ .Values.Instance }}-configuration
         configMap:
           name: faucet-{{ .Values.Instance }}-configuration
-status: {}
