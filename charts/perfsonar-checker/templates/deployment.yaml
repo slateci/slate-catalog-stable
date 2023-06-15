@@ -20,7 +20,6 @@ spec:
     type: Recreate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: {{ template "perfsonar-checker.name" . }}
         chart: {{ template "perfsonar-checker.chart" . }}
@@ -52,7 +51,7 @@ spec:
           subPath: start-nginx.sh
       {{ end }}
       - name: perfsonar-testpoint
-        image: hub.opensciencegrid.org/slate/perfsonar-checker:5.0.2
+        image: 'hub.opensciencegrid.org/slate/perfsonar-checker:5.0.2'
         imagePullPolicy: Always
         securityContext: 
           privileged: true
@@ -91,4 +90,3 @@ spec:
         configMap:
           name: perfsonar-checker-{{ .Values.Instance }}-startup
       {{ end }}
-status: {}
