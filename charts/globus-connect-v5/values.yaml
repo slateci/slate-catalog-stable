@@ -60,13 +60,13 @@ StorageConfig:
   RestrictPaths: false  # Use GlobusRestrictConfig for restrictPaths 
   CustomIdentityMapping: false  # Use GlobusIdentityConfig for restrictPaths 
   CephConfig:           # only needed if StorageType is set to ceph
-      S3Endpoint: ""
-      AdminKey:  ""
-      SecretKey: ""
-      Bucket: ""
+    S3Endpoint: ""
+    AdminKey:  ""
+    SecretKey: ""
+    Bucket: ""
   PosixConfig:          # only needed if StorageType is set to posix
-      DeniedGroups: []
-      AllowedGroups: []
+    DeniedGroups: []
+    AllowedGroups: []
 
 CollectionConfig:
   BasePath: "" 
