@@ -40,18 +40,8 @@ XCacheConfig:
   # This must be created BEFORE deploying XCache
   CertSecret: xcache-cert-secret
 
-image:
-  # repository: opensciencegrid/atlas-xcache
-  # tag: fresh
-  # pullPolicy: Always
-  repository: slateci/xcache
-  tag: testing
-  pullPolicy: Always
-
 heartbeats:
   frequency: 60
-  image: ivukotic/atlas-xcache-heartbeats
-  tag: latest
 
 ### SLATE-START ###
 SLATE:
