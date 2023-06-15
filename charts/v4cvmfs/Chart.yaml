@@ -2,7 +2,7 @@ apiVersion: v2
 name: v4cvmfs
 description: A Varnish for CVMFS
 type: application
-version: 0.1.50
+version: 0.1.51
 appVersion: 1.49.0
 maintainers:
   - name: Ilija Vukotic
