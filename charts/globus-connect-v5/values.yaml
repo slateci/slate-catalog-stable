@@ -43,13 +43,7 @@ ExternalPath: /export
 # The path for a backing filesystem to be mounted from the host system. 
 InternalPath: /tmp
 # The name of a PersistentVolumeClaim which should be mounted as backing storage.
-PVCName: 
-
-
-# Supported values are e.g. 'latest', '1.0.0', etc.. Consult 
-# https://hub.opensciencegrid.org/harbor/projects/50/repositories/globus-connect-v5/artifacts-tab
-# for available tags
-ImageTag: '0.6'
+PVCName:
 
 # The following settings only need to be changed if you
 # want to use the experimental auto-configuration features
