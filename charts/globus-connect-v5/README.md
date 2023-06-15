@@ -149,14 +149,14 @@ $ slate secret create <secret-name> --group <group> --cluster <cluster> \
 To deploy the chart, first get the values file and store it:
 
 ```
-slate app get-conf --dev globus-connect-v5 > gcs.yaml
+slate app get-conf globus-connect-v5 > gcs.yaml
 ```
 
 Edit to your liking (notably the GlobusCredentialSecret and GlobusPasswdSecret 
 must match what you have created in previous steps) and deploy with:
 
 ```
-slate app install --cluster <cluster> --group <group> --dev globus-connect-v5 --conf gcs.yaml
+slate app install --cluster <cluster> --group <group> globus-connect-v5 --conf gcs.yaml
 ```
 
 This will return an instance ID, please note this as it will be needed later.
