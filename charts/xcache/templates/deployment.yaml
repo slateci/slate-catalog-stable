@@ -62,8 +62,8 @@ spec:
       
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "opensciencegrid/atlas-xcache:fresh"
+          imagePullPolicy: Always
           env:
           - name: XC_SPACE_HIGH_WM
             value: {{ .Values.XCacheConfig.HighWaterMark | quote }}
@@ -124,7 +124,7 @@ spec:
             mountPath: "/xcache/meta"
 
         - name: x509
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "opensciencegrid/atlas-xcache:fresh"
           command: ["/usr/local/sbin/run_x509_updater.sh"]
           resources:
             requests:
@@ -140,7 +140,7 @@ spec:
             readOnly: true
 
         - name: reporter
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "opensciencegrid/atlas-xcache:fresh"
           command: ["/usr/local/sbin/run_cache_reporter.sh"]
           env:
           - name: XC_RESOURCENAME
