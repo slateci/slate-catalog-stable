@@ -165,7 +165,7 @@ spec:
             mountPath: "/xcache/meta"
             readOnly: true
         - name: heartbeats
-          image: "{{ .Values.heartbeats.image }}:{{ .Values.heartbeats.tag }}"
+          image: "hub.opensciencegrid.org/slate/atlas-xcache-heartbeats:1.0.0"
           command: ["/usr/local/sbin/run_heartbeats.sh"]
           volumeMounts:
           - name: x509-data

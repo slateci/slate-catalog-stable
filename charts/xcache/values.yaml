@@ -42,8 +42,6 @@ XCacheConfig:
 
 heartbeats:
   frequency: 60
-  image: ivukotic/atlas-xcache-heartbeats
-  tag: latest
 
 ### SLATE-START ###
 SLATE:
