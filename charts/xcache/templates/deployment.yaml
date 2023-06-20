@@ -62,7 +62,7 @@ spec:
       
       containers:
         - name: {{ .Chart.Name }}
-          image: "opensciencegrid/atlas-xcache:fresh"
+          image: "slateci/xcache:testing"
           imagePullPolicy: Always
           env:
           - name: XC_SPACE_HIGH_WM
@@ -124,7 +124,7 @@ spec:
             mountPath: "/xcache/meta"
 
         - name: x509
-          image: "opensciencegrid/atlas-xcache:fresh"
+          image: "slateci/xcache:testing"
           command: ["/usr/local/sbin/run_x509_updater.sh"]
           resources:
             requests:
@@ -140,7 +140,7 @@ spec:
             readOnly: true
 
         - name: reporter
-          image: "opensciencegrid/atlas-xcache:fresh"
+          image: "slateci/xcache:testing"
           command: ["/usr/local/sbin/run_cache_reporter.sh"]
           env:
           - name: XC_RESOURCENAME
