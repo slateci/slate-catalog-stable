@@ -349,6 +349,20 @@ entries:
   osg-frontier-squid:
   - apiVersion: v1
     appVersion: 4.13-1.1
+    created: "2023-06-21T21:56:39.046832669Z"
+    description: A Helm chart for configuration and deployment of the Open Science
+      Grid's Frontier Squid application.
+    digest: a173d6a54cb876af61b0fd81c35618f1bc0c54438de5361c0024efbdd1140ad2
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: osg-frontier-squid
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.8.8/osg-frontier-squid-1.8.8.tgz
+    version: 1.8.8
+  - apiVersion: v1
+    appVersion: 4.13-1.1
     created: "2023-06-21T20:32:21.805712844Z"
     description: A Helm chart for configuration and deployment of the Open Science
       Grid's Frontier Squid application.
@@ -400,6 +414,15 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
     version: 1.7.12
   osg-hosted-ce:
+  - apiVersion: v1
+    appVersion: 5.1.5
+    created: "2023-06-21T21:56:39.196412898Z"
+    description: OSG Hosted Compute Element
+    digest: 24a44ffd9d7930c407ab9eda35b32ad3e434cacd4b59eaf13664d40f774e09f2
+    name: osg-hosted-ce
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.5.2/osg-hosted-ce-4.5.2.tgz
+    version: 4.5.2
   - apiVersion: v1
     appVersion: 5.1.5
     created: "2023-06-21T20:32:21.927883188Z"
@@ -1035,4 +1058,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-06-21T20:32:22.440340323Z"
+generated: "2023-06-21T21:56:39.196619597Z"
