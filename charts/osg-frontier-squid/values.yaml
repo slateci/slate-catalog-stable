@@ -17,7 +17,7 @@ SLATE:
 # Supported values are e.g. 'release' or 'testing' or 'development'. Default is
 # 'release'. Consult the opensciencegrid/frontier-squid docker image for other
 # tags.
-# ImageTag: release
+ImageTag: '3.6-release'
 
 Service:
   # Port that the service will utilize.
