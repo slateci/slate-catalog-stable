@@ -17,6 +17,15 @@ entries:
   condor-manager:
   - apiVersion: v1
     appVersion: 10.0.2
+    created: "2023-06-21T20:32:20.722982539Z"
+    description: HTCondor Central Manager Node
+    digest: 2d01df49f20e9aeafd15a69afa288db66271b6bb2a778c6dad43c57533106bda
+    name: condor-manager
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-manager-0.2.4/condor-manager-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v1
+    appVersion: 10.0.2
     created: "2023-05-02T16:37:34.850957548Z"
     description: HTCondor Central Manager Node
     digest: 1efd95e9c26b41ee320d6f81e1f0ef149d717714efa9b3c0bf227ab577b5b525
@@ -34,6 +43,15 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/condor-manager-0.2.2/condor-manager-0.2.2.tgz
     version: 0.2.2
   condor-worker:
+  - apiVersion: v1
+    appVersion: 10.0.2
+    created: "2023-06-21T20:32:20.988239655Z"
+    description: HTCondor distributed high-throughput computing system
+    digest: f99581d61bb612e1678ca5748918b420391536faf611a175cf011e85fbeac422
+    name: condor-worker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/condor-worker-0.10.4/condor-worker-0.10.4.tgz
+    version: 0.10.4
   - apiVersion: v1
     appVersion: 10.0.2
     created: "2023-05-02T16:37:34.979221687Z"
@@ -82,6 +100,15 @@ entries:
   faucet:
   - apiVersion: v1
     appVersion: 1.9.9
+    created: "2023-06-21T20:32:21.113973438Z"
+    description: Faucet OpenFlow SDN Controller
+    digest: 5450f366602d55fe92963e97418e8d72f89c418330894a6f271e391583f9be5f
+    name: faucet
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/faucet-1.2.3/faucet-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v1
+    appVersion: 1.9.9
     created: "2022-12-19T21:47:57.442273516Z"
     description: Faucet OpenFlow SDN Controller
     digest: f21c3a7b4a5ab1f4fb053c23d6c53c1851996e128f76f60932669662ba7a0587
@@ -110,6 +137,15 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/globus-compute-endpoint-0.1.6/globus-compute-endpoint-0.1.6.tgz
     version: 0.1.6
   globus-connect-v4:
+  - apiVersion: v1
+    appVersion: 4.0.63
+    created: "2023-06-21T20:32:21.248254314Z"
+    description: Globus Connect data transfer service
+    digest: f21139b5c72a7ffa5fb254f200ec03673fb914f38e97a03e7859133783a88fb4
+    name: globus-connect-v4
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v4-0.7.9/globus-connect-v4-0.7.9.tgz
+    version: 0.7.9
   - apiVersion: v1
     appVersion: 4.0.63
     created: "2023-06-01T18:17:54.588560873Z"
@@ -149,6 +185,15 @@ entries:
   globus-connect-v5:
   - apiVersion: v1
     appVersion: 5.4.61
+    created: "2023-06-21T20:32:21.385707526Z"
+    description: Globus Connect data transfer service
+    digest: 09e2a3614dc39bbd2ec1755eeb927e935095e0cdd42f827c2d3f0e2b36101fc7
+    name: globus-connect-v5
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v5-0.14.1/globus-connect-v5-0.14.1.tgz
+    version: 0.14.1
+  - apiVersion: v1
+    appVersion: 5.4.61
     created: "2023-06-15T06:43:31.398628043Z"
     description: Globus Connect data transfer service
     digest: 4b5312ff4bf2c9a3b338855a306302add627c229a44186bbe8e9745dd85a40e9
@@ -166,6 +211,16 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/globus-connect-v5-0.12/globus-connect-v5-0.12.tgz
     version: "0.12"
   jupyterlab:
+  - apiVersion: v2
+    appVersion: 3.6.1
+    created: "2023-06-21T20:32:21.503478121Z"
+    description: A JupyterLab with a condor-submit capability
+    digest: 473080a1aa668923a6e8de1dfc16b40a522beae740e954a2d3726711a55b0778
+    name: jupyterlab
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/jupyterlab-0.5.4/jupyterlab-0.5.4.tgz
+    version: 0.5.4
   - apiVersion: v2
     appVersion: 3.6.1
     created: "2023-05-02T16:37:35.114598662Z"
@@ -187,6 +242,19 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/jupyterlab-0.5.2/jupyterlab-0.5.2.tgz
     version: 0.5.2
   nginx:
+  - apiVersion: v1
+    appVersion: 1.25.1
+    created: "2023-06-21T20:32:21.627596286Z"
+    description: A simple nginx deployment which serves a static page
+    digest: 3f33e335715b29c1558792df39103fca7c0d80487f5b93bec352b57a95593ff7
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: nginx
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/nginx-1.2.7/nginx-1.2.7.tgz
+    version: 1.2.7
   - apiVersion: v1
     appVersion: latest
     created: "2023-05-17T20:19:50.323115845Z"
@@ -281,6 +349,20 @@ entries:
   osg-frontier-squid:
   - apiVersion: v1
     appVersion: 4.13-1.1
+    created: "2023-06-21T20:32:21.805712844Z"
+    description: A Helm chart for configuration and deployment of the Open Science
+      Grid's Frontier Squid application.
+    digest: 04ffb0f2820924f2af2af72b894c203c9dbc377b7c0cf3fa045ce78b0f37b44c
+    maintainers:
+    - email: slateci@googlegroups.com
+      name: slateci
+      url: https://slateci.io/
+    name: osg-frontier-squid
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.8.7/osg-frontier-squid-1.8.7.tgz
+    version: 1.8.7
+  - apiVersion: v1
+    appVersion: 4.13-1.1
     created: "2022-10-31T20:11:00.142622592Z"
     description: A Helm chart for configuration and deployment of the Open Science
       Grid's Frontier Squid application.
@@ -318,6 +400,15 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/osg-frontier-squid-1.7.12/osg-frontier-squid-1.7.12.tgz
     version: 1.7.12
   osg-hosted-ce:
+  - apiVersion: v1
+    appVersion: 5.1.5
+    created: "2023-06-21T20:32:21.927883188Z"
+    description: OSG Hosted Compute Element
+    digest: 0a37b5dcb59c735697907916e1638ca6a2579de7219f633184f99009262d1cfc
+    name: osg-hosted-ce
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/osg-hosted-ce-4.5.1/osg-hosted-ce-4.5.1.tgz
+    version: 4.5.1
   - apiVersion: v1
     appVersion: 5.1.5
     created: "2023-05-24T20:06:05.48114713Z"
@@ -384,6 +475,16 @@ entries:
   perfsonar-checker:
   - apiVersion: v1
     appVersion: 5.0.2
+    created: "2023-06-21T20:32:22.055778994Z"
+    description: PerfSONAR checker app for running predefined network performance
+      tests
+    digest: 67d72d5c84a67282bbd78d64d51e63284a760c17942526dc3c256a3bc8f3a68a
+    name: perfsonar-checker
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/perfsonar-checker-1.2.2/perfsonar-checker-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v1
+    appVersion: 5.0.2
     created: "2023-06-13T18:26:26.563090679Z"
     description: PerfSONAR checker app for running predefined network performance
       tests
@@ -445,6 +546,16 @@ entries:
   stashcache:
   - apiVersion: v1
     appVersion: v4.12.0-rc2
+    created: "2023-06-21T20:32:22.177913737Z"
+    description: StashCache is an XRootD-based caching service
+    digest: 4da566323f33b1517b1699418fbd3f88beefec1bc2daad22b1f0cf2e354db937
+    home: https://opensciencegrid.org/docs/data/stashcache/overview/
+    name: stashcache
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/stashcache-0.1.20/stashcache-0.1.20.tgz
+    version: 0.1.20
+  - apiVersion: v1
+    appVersion: v4.12.0-rc2
     created: "2022-11-10T16:20:03.909103384Z"
     description: StashCache is an XRootD-based caching service
     digest: c1b0cf95f029962fcb01b788614e31eaa02eba5e698cba3538811d989bbdcb60
@@ -454,6 +565,19 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/stashcache-0.1.19/stashcache-0.1.19.tgz
     version: 0.1.19
   v4a:
+  - apiVersion: v2
+    appVersion: 1.29.0
+    created: "2023-06-21T20:32:22.302907711Z"
+    description: A Varnish for ATLAS Frontiers
+    digest: e8a746b5a4aabdba47ada5a564ef3849cc97b4fe22d6f5a86e1da26a3d2ecbb9
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4a
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4a-0.1.32/v4a-0.1.32.tgz
+    version: 0.1.32
   - apiVersion: v2
     appVersion: 1.29.0
     created: "2023-06-14T20:15:20.202356985Z"
@@ -533,6 +657,19 @@ entries:
     - https://github.com/slateci/slate-catalog-stable/releases/download/v4a-0.1.26/v4a-0.1.26.tgz
     version: 0.1.26
   v4cvmfs:
+  - apiVersion: v2
+    appVersion: 1.49.0
+    created: "2023-06-21T20:32:22.43915811Z"
+    description: A Varnish for CVMFS
+    digest: 87a499928d0f9971c91a579243af86237653a7e89a906558d35af544e41ae5de
+    maintainers:
+    - email: ivukotic@uchicago.edu
+      name: Ilija Vukotic
+    name: v4cvmfs
+    type: application
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/v4cvmfs-0.1.51/v4cvmfs-0.1.51.tgz
+    version: 0.1.51
   - apiVersion: v2
     appVersion: 1.49.0
     created: "2023-06-14T20:15:20.392235163Z"
@@ -898,4 +1035,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-06-20T21:28:01.285436279Z"
+generated: "2023-06-21T20:32:22.440340323Z"
