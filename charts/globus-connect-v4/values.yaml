@@ -49,7 +49,7 @@ GlobusConfig:
   #Uncomment this field if you need to set the MyProxy server and/or port
   #MyProxyServer:
   Security:
-     IdentityMethod: "CILogon"
+    IdentityMethod: "CILogon"
 
 # The path at which the storage should be mounted. 
 ExternalPath: /export

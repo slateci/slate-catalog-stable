@@ -1,10 +1,6 @@
 # Generates app name as "connect-submit-[Instance]"
 Instance: ""
 
-#This is global config to specify which container image to pull. The image tag doesn't necessarily indicate or match the app version in the image.
-ContainerTags:
-  CondorManagerImageVer: '10.0.2'
-
 CondorConfig:
   # Extra configuration can be added via the ConfigFile parameter
   # ConfigFile: |+
