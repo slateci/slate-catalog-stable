@@ -558,6 +558,15 @@ entries:
     version: 1.1.4
   perfsonar-testpoint:
   - apiVersion: v1
+    appVersion: 5.0.2
+    created: "2023-06-27T18:39:29.317362603Z"
+    description: Perfsonar Testpoint Deployment
+    digest: 9ffff33bab8315dfa5da7ba7ac2647bd771ca1fe431d0acde37605a6787334c9
+    name: perfsonar-testpoint
+    urls:
+    - https://github.com/slateci/slate-catalog-stable/releases/download/perfsonar-testpoint-1.5.0/perfsonar-testpoint-1.5.0.tgz
+    version: 1.5.0
+  - apiVersion: v1
     appVersion: 4.3.4
     created: "2022-11-21T18:07:44.08731756Z"
     description: Perfsonar Testpoint Deployment
@@ -1058,4 +1067,4 @@ entries:
     urls:
     - https://github.com/slateci/slate-catalog-stable/releases/download/xcache-0.7.3/xcache-0.7.3.tgz
     version: 0.7.3
-generated: "2023-06-21T21:56:39.196619597Z"
+generated: "2023-06-27T18:39:29.317499202Z"
