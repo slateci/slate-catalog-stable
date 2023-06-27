@@ -10,6 +10,14 @@ Instance: ''
 # Otherwise, it will allow itself to be scheduled on any node. 
 nodeSelection: false
 
+##
+#The below has a temporary fix to have supervisord run owampd and twampd in foreground
+#so that supervisord doesn't restart them and then reports that they're in 'FATAL' states.
+#If you would like to use the default supervisord configuaration the perfSONAR team put into the docker image,
+#set the below to false
+CustomSupervisordConfig:
+  Enabled: true
+
 ### SLATE-START ###
 SLATE:
   Instance:
