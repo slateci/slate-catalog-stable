@@ -27,12 +27,28 @@ spec:
         instance: {{ .Values.Instance | quote }}
     spec:
       hostNetwork: true
+      {{ if .Values.CustomSupervisordConfig.Enabled  }}
+      volumes:
+      - name: supervisord-configuration
+        configMap:
+          name: perfsonar-testpoint-{{ .Values.Instance }}-supervisord-configuration
+          items:
+          - key: supervisord.conf
+            path: supervisord.conf
+            mode: 292
+      {{ end }}
       containers:
       - name: perfsonar-testpoint
-        image: perfsonar/testpoint:v4.3.4
+        image: perfsonar/testpoint:v5.0.2
         imagePullPolicy: Always
         securityContext: 
           privileged: true
+        {{ if .Values.CustomSupervisordConfig.Enabled  }}
+        volumeMounts:
+        - name: supervisord-configuration
+          mountPath: /etc/supervisord.conf
+          subPath: supervisord.conf
+        {{ end }}
       restartPolicy: Always
       {{ if .Values.nodeSelection }}
       nodeSelector:
