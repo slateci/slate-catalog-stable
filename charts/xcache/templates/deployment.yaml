@@ -124,7 +124,7 @@ spec:
             mountPath: "/xcache/meta"
 
         - name: x509
-          image: "slateci/xcache:testing"
+          image: "hub.opensciencegrid.org/usatlas/atlas-xcache:latest"
           command: ["/usr/local/sbin/run_x509_updater.sh"]
           resources:
             requests:
