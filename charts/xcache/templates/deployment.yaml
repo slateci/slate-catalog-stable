@@ -140,7 +140,7 @@ spec:
             readOnly: true
 
         - name: reporter
-          image: "ivukotic/atlas-xcache-heartbeats:latest"
+          image: "hub.opensciencegrid.org/usatlas/atlas-xcache:latest"
           command: ["/usr/local/sbin/run_cache_reporter.sh"]
           env:
           - name: XC_RESOURCENAME
