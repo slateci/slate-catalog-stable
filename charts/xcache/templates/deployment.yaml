@@ -140,7 +140,7 @@ spec:
             readOnly: true
 
         - name: reporter
-          image: "slateci/xcache:testing"
+          image: "ivukotic/atlas-xcache-heartbeats:latest"
           command: ["/usr/local/sbin/run_cache_reporter.sh"]
           env:
           - name: XC_RESOURCENAME

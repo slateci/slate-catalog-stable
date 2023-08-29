@@ -37,13 +37,13 @@ Service:
   
 XCache nodes should be tainted:
 
-```
+```bash
 kubectl taint nodes "xcache nodename" xcache=true:PreferNoSchedule
 ```
 
 and labeled:
 
-```
+```bash
 kubectl label nodes <your-node-name> xcache=<Instance>
 ```
 
