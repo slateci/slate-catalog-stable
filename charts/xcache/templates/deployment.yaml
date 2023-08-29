@@ -62,7 +62,7 @@ spec:
       
       containers:
         - name: {{ .Chart.Name }}
-          image: "slateci/xcache:testing"
+          image: "hub.opensciencegrid.org/usatlas/atlas-xcache:latest"
           imagePullPolicy: Always
           env:
           - name: XC_SPACE_HIGH_WM
