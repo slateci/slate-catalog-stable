@@ -62,7 +62,11 @@ spec:
       
       containers:
         - name: {{ .Chart.Name }}
+          {{ if .Values.Test }} 
+          image: "hub.opensciencegrid.org/usatlas/atlas-xcache:testing"
+          {{ else }}
           image: "hub.opensciencegrid.org/usatlas/atlas-xcache:latest"
+          {{ end }}
           imagePullPolicy: Always
           env:
           - name: XC_SPACE_HIGH_WM
@@ -124,7 +128,11 @@ spec:
             mountPath: "/xcache/meta"
 
         - name: x509
+          {{ if .Values.Test }} 
+          image: "hub.opensciencegrid.org/usatlas/atlas-xcache:testing"
+          {{ else }}
           image: "hub.opensciencegrid.org/usatlas/atlas-xcache:latest"
+          {{ end }}
           command: ["/usr/local/sbin/run_x509_updater.sh"]
           resources:
             requests:
@@ -140,7 +148,11 @@ spec:
             readOnly: true
 
         - name: reporter
+          {{ if .Values.Test }} 
+          image: "hub.opensciencegrid.org/usatlas/atlas-xcache:testing"
+          {{ else }}
           image: "hub.opensciencegrid.org/usatlas/atlas-xcache:latest"
+          {{ end }}
           command: ["/usr/local/sbin/run_cache_reporter.sh"]
           env:
           - name: XC_RESOURCENAME
@@ -165,7 +177,11 @@ spec:
             mountPath: "/xcache/meta"
             readOnly: true
         - name: heartbeats
+          {{ if .Values.Test }} 
+          image: "ivukotic/atlas-xcache-heartbeats:testing"
+          {{ else }}
           image: "ivukotic/atlas-xcache-heartbeats:latest"
+          {{ end }}
           command: ["/usr/local/sbin/run_heartbeats.sh"]
           volumeMounts:
           - name: x509-data

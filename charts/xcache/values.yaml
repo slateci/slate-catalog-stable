@@ -2,6 +2,8 @@
 # Enables unique instances of XCache in one namespace
 Instance: slate01
 
+Test: false
+
 Service:
   # Port that the service will utilize.
   Port: 1094
